@@ -82,11 +82,11 @@ public class UserSteps extends Base {
         //     wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.message-success.success.message")));
         //     boolean success = driver.getPageSource().contains("Thank you for registering") ||
         //                     driver.getPageSource().contains("My Account");
-        //     assert success : "❌ Registration failed!";
+        //     assert success : " Registration failed!";
         //     System.out.println("✅ Successfully registered!");
         // } catch (Exception e) {
         //     e.printStackTrace();
-        //     assert false : "❌ Registration failed due to exception: " + e.getMessage();
+        //     assert false : " Registration failed due to exception: " + e.getMessage();
         // }
     }
 
@@ -204,7 +204,7 @@ public class UserSteps extends Base {
 //     //     wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("My Account")));
 //     //     boolean success = driver.getPageSource().contains("Thank you for registering") ||
 //     //                       driver.getPageSource().contains("My Account");
-//     //     assert success : "❌ Registration failed!";
+//     //     assert success : " Registration failed!";
 //     // }
 //     @Then("I should be registered successfully")
 //     public void i_should_be_registered_successfully() {
@@ -212,11 +212,11 @@ public class UserSteps extends Base {
 //             wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.message-success.success.message")));
 //             boolean success = driver.getPageSource().contains("Thank you for registering") ||
 //                             driver.getPageSource().contains("My Account");
-//             assert success : "❌ Registration failed!";
-//             System.out.println("✅ Successfully registered!");
+//             assert success : " Registration failed!";
+//             System.out.println(" Successfully registered!");
 //         } catch (Exception e) {
 //             e.printStackTrace();
-//             assert false : "❌ Registration failed due to exception: " + e.getMessage();
+//             assert false : " Registration failed due to exception: " + e.getMessage();
 //         }
 //     }
 
@@ -252,6 +252,6 @@ public class UserSteps extends Base {
 //         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.panel.header")));
 //         boolean loggedIn = driver.getPageSource().contains("Welcome, Test User!") ||
 //                            driver.getPageSource().contains("My Account");
-//         assert loggedIn : "❌ Login failed!";
+//         assert loggedIn : " Login failed!";
 //     }
 // }

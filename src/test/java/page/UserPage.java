@@ -67,11 +67,11 @@ public class UserPage {
             wait.until(ExpectedConditions.visibilityOfElementLocated(myAccountText));
             boolean success = driver.getPageSource().contains("Thank you for registering") ||
                             driver.getPageSource().contains("My Account");
-            assert success : "❌ Registration failed!";
-            System.out.println("✅ Successfully registered!");
+            assert success : " Registration failed!";
+            System.out.println(" Successfully registered!");
         } catch (Exception e) {
             e.printStackTrace();
-            assert false : "❌ Registration failed due to exception: " + e.getMessage();
+            assert false : " Registration failed due to exception: " + e.getMessage();
         }
     }
 
