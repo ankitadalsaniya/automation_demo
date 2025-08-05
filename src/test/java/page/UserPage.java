@@ -1,13 +1,21 @@
 package page;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.List;
+import org.openqa.selenium.TimeoutException;
 
-
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 public class UserPage {
 
     private WebDriver driver;
@@ -42,10 +50,15 @@ public class UserPage {
     private By signInButton = By.id("send2");
     private By signInAssertion = By.cssSelector("div.panel.header");
 
+    private By dismiss = By.id("dismiss-button");
+
+
+
     public void create_an_account() {
         WebElement link = wait.until(ExpectedConditions.elementToBeClickable(createAnAccountLink));
         link.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameField));
+
     }
 
     public void sign_up_details(String firstName, String lastName, String email, String password) {
@@ -104,5 +117,4 @@ public class UserPage {
                            driver.getPageSource().contains("My Account");
         assert loggedIn : "Login failed!";
     }
-
 }
